@@ -1,16 +1,18 @@
-# React + Vite
+# Esercizio React: le props
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Completa `src/App.jsx`: l'array `profiles` è già pronto e
+`src/components/ProfileCard.jsx` sa già mostrare un oggetto ricevuto tramite la
+prop `item`. Ora crea una card per ogni oggetto dell'array.
 
-Currently, two official plugins are available:
+## Cosa fare
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Nel punto indicato dal `TODO`, usa `profiles.map(...)`.
+2. Importa `ProfileCard` e, per ogni oggetto, restituisci una `<ProfileCard />`
+   passandolo con la prop `item`.
+3. Avvia la pagina con `npm run dev` e controlla che le tre card siano diverse.
+4. Prova ad aggiungere un oggetto all'array `profiles`.
 
-## React Compiler
+Suggerimento: dentro `map`, il parametro della callback rappresenta un oggetto
+dell'array. React richiede anche una `key` univoca per ogni elemento creato.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Per verificare il progetto usa `npm run build` e `npm run lint`.
